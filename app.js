@@ -40,17 +40,19 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
     function openMenu() {
-        document.querySelectorAll(".menu-overlay").style.pointerEvents = "all";
+        document.querySelector(".menu-overlay").style.pointerEvents = "all";
         tl.play();
     }
 
     function closeMenu() {
-        document.querySelectorAll(".menu-overlay").style.pointerEvents = "none";
+        document.querySelector(".menu-overlay").style.pointerEvents = "none";
         tl.reverse();
     }
 
-    document.querySelectorAll(".menu-btn-open").addEventListener("click", openMenu);
-    document.querySelectorAll(".menu-btn-close").addEvent("click", closeMenu);
+    document.querySelector(".menu-btn-open").addEventListener("click", openMenu);
+    document
+    .querySelector(".menu-close")
+    .addEventListener("click", closeMenu);
     tl.reverse();
 
 });
